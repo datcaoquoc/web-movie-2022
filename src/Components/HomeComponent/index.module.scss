@@ -1,0 +1,139 @@
+@import '../../common/VariableCss/variable.scss';
+
+
+.container{
+    // background-image: linear-gradient(to bottom right, $yellow,$main_dark );
+    // background-image: linear-gradient(rgb(0, 0, 0), $main_dark);
+    background-color: $main_dark;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.bodyContainer{
+    width: 1250px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+
+    .titleContent{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        position: relative;
+
+        .content{
+            color: $white;
+            font-size: 2.1rem;
+            // font-weight: 800;
+            position: relative;
+            display: inline;
+        
+            &::before {
+                content: "";
+                width: 40%;
+                height: 4px;
+                position: absolute;
+                bottom: -7px;
+                background-color: $yellow;
+                border-radius: 0px 5px 5px 0px;
+            }
+        }
+
+        .seemore{
+            color: rgb(188, 188, 188);
+            cursor: pointer;
+            font-size: 1.8rem;
+            text-decoration: underline; 
+            position: absolute;
+            right: 0;
+            bottom: -20px;
+
+            &:hover{
+                color: rgb(143, 143, 143)
+            }
+        }
+    }
+}
+
+.bodyContainertv{
+    @extend .bodyContainer;
+    display: block;
+}
+
+
+.bodyLeft{
+    width: 70%;
+    margin-right: 3%;
+    height: auto;
+
+    .list{
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.bodyRight{
+    width: 27%;
+    height: 720px;
+    border: 1px solid $yellow;
+    padding: 0px 10px;
+    background-color: $gray;
+    border-radius: 7px;
+}
+
+.item{
+    padding: 0;
+
+
+    .info{
+        position: static;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .bodyContainer{
+        width: 100%;
+        padding: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .bodyContainer{
+        width: 100%;
+        padding: 40px;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 835px) {
+    .bodyContainer{
+        width: 100%;
+        padding: 40px;
+        margin-top: 10px;
+    }
+    .bodyRight{
+        display: none;
+    }
+    .bodyLeft{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .bodyContainer{
+        width: 100%;
+        padding: 10px 30px;
+        margin-top: 10px;
+
+    }
+}
+

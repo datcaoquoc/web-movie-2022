@@ -1,0 +1,32 @@
+@import "../VariableCss/variable.scss";
+
+.container {
+  background-color: $main_dark;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .divContainer {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 10px 0px;
+    background-color: $gray;
+    margin-top: 100px;
+    border-top: 1px solid $white;
+
+    p {
+      width: 100%;
+      height: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: $white;
+    }
+
+    h2 {
+      text-align: center;
+      color: $orange;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '../VariableCss/variable.scss';
+
+.content{
+    color: $whiteblur !important;
+    font-size: 1.5rem;
+}
+
+.username{
+    font-size: 1.6rem;
+    color: $white ;
+    cursor: pointer;
+
+    &:hover{
+    color: $white;
+
+    }
+}
+
+.seemore{
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-flex;
+    color: $white;
+
+    &:hover{
+        color: $white;
+    }
+}

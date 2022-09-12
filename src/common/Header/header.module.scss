@@ -1,0 +1,269 @@
+@import "../VariableCss/variable.scss";
+
+.container {
+  width: 100%;
+  background-color: $black;
+  position: relative;
+}
+
+.containerNav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  z-index: 1000;
+  border-bottom: 1px solid $gray;
+  border-top: 1px solid $gray;
+
+  .navBar {
+    width: 1100px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+
+  .btnBy {
+    height: 40px;
+    background-color: $orange;
+    color: $white;
+    font-size: 1.6rem;
+    padding: 0px 20px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 15px;
+    margin-top: 3px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e75e02;
+    }
+  }
+}
+.sticky {
+  animation: headerscrols 0.3s alternate;
+  // width: 100%;
+  // padding: 0px 200px;
+  height: 60px;
+  // background-color: $black;
+  border-bottom: 1px solid $gray;
+  background-image: linear-gradient(
+    to bottom,
+    $main_dark,
+    rgba(0, 0, 0, 0.274) 110%
+  );
+  border: none;
+}
+
+.logoContainer {
+  width: 100%;
+  height: 70px;
+  background-size: cover;
+  background-color: $main_dark;
+  padding: 0px 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 210px;
+    height: 100%;
+  }
+
+  .marquee {
+    width: 100%;
+    height: 30px;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 1.7rem;
+    color: $graylight;
+  }
+}
+
+@keyframes headerscrols {
+  100% {
+    transform: translateY(0%);
+  }
+  0% {
+    transform: translateY(-60px);
+  }
+}
+
+@keyframes categoryActive {
+  100% {
+    width: 100%;
+  }
+  0% {
+    width: 0%;
+  }
+}
+
+@keyframes displaycategory {
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(5%);
+    opacity: 0.4;
+  }
+}
+
+.categoryContainer {
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.listCategory {
+  display: flex;
+  list-style-type: none;
+  margin-top: 40px;
+  padding-left: 0px;
+
+  li > ul {
+    list-style-type: none;
+  }
+
+  .categoryItem {
+    text-decoration: none;
+    width: auto;
+    height: 50px;
+    display: block;
+    padding: 0px 25px 0px 0px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: $graylight;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+  .childrenCategory {
+    display: flex;
+    width: 700px;
+    height: auto;
+    background-color: rgba(18, 17, 17, 0.979);
+    margin-top: -18px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    // justify-content: space-around;
+    justify-content: space-between;
+    box-shadow: 0 0 10px $black;
+    animation: displaycategory 0.2s;
+
+    .categoryItemchil {
+      @extend .categoryItem;
+      text-transform: capitalize;
+      color: $white;
+      font-weight: 400;
+      min-width: 200px;
+      width: auto;
+      height: auto;
+      padding: 10px;
+    }
+  }
+}
+
+// search container
+
+.toolContainer {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: center;
+
+  div {
+    margin-left: 25px;
+  }
+
+  .icSearch {
+    font-size: 30px;
+    color: $white;
+    cursor: pointer;
+  }
+
+  .icon {
+    padding: 5px;
+    margin: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    // border: 2px solid $yellow;
+    border-radius: 5px;
+  }
+}
+
+.tippytooltip {
+  width: 500px;
+  height: auto;
+  background-color: $gray;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+
+  input {
+    width: 85%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+  }
+
+  .btnsearch {
+    width: 14%;
+    height: 40px;
+    padding: 9px;
+    margin-left: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .containerNav {
+    .navBar {
+      width: 100%;
+      padding: 0px 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .logoContainer {
+    width: 100%;
+    height: 70px;
+    background-size: cover;
+    background-color: $main_dark;
+    padding: 0px 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+
+    .logo {
+      width: 210px;
+      height: 100%;
+    }
+
+    .marquee {
+      display: none;
+    }
+  }
+
+  .btnBy {
+    display: none;
+  }
+}

@@ -1,0 +1,149 @@
+@import '../../../common/VariableCss/variable.scss';
+
+.container{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    overflow: visible;
+    position: relative;
+}
+
+
+.itemSlice{
+    width: auto;
+    height: 300px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+
+
+
+    &:hover {
+        .img {
+            opacity: 0;
+        }
+
+        .item {
+            width: 600px;
+        }
+
+        .desItem{
+            opacity: 0.9;
+            width: 600px;
+
+            &:hover {
+                .contentDesc {
+                    opacity: 1;
+                    transform: translateX(0%);
+                }
+            }
+        }
+
+        
+
+    }
+
+    .item{
+        width: 210px;
+        height: 100%;
+        // background-color: red;
+        transition: width 0.3s;
+    }
+
+
+
+    .img{
+        width: 210px;
+        height: 300px;
+        border-radius: 10px;
+        opacity: 1;
+        transition: opacity 0.1s;
+    }
+
+    .desItem{
+        
+        // display: none;
+        opacity: 0;
+        width: 220px;
+        height: 100%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        transition: width 0.3s, opacity 0.1s;
+        overflow: hidden;
+
+        .imgdesc{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            opacity: 0.6;
+
+        }
+
+        .contentDesc{
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            padding: 20px;
+            width: 600px;
+            transform: translateY(50%);
+            transition: transform 0.5s , opacity 0.5;
+
+            h1{
+                color: $orange;
+                font-weight: 800;
+                text-shadow: 0 0 20px black,0 0 20px black,0 0 20px black;
+            }
+            p {
+                color: $white;
+                text-shadow: 0 0 20px black,0 0 20px black,0 0 20px black;
+
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 760px) {
+    
+.itemSlice{
+    width: auto;
+    height: 200px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    .item{
+        width: 150px;
+        height: 100%;
+        // background-color: red;
+        transition: width 0.3s;
+    }
+
+    .img{
+        width: 150px;
+        height: 200px;
+        border-radius: 10px;
+        opacity: 1;
+        transition: opacity 0.1s;
+    }
+
+    .contentDesc{
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        padding: 20px;
+        width: 100px;
+        transform: translateY(50%);
+        transition: transform 0.5s , opacity 0.5;
+
+        h1{
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1rem;
+
+        }
+    }
+}
+}

@@ -1,0 +1,37 @@
+@import '../../../common/VariableCss/variable.scss';
+
+.container{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    // background-color: red;
+
+    .containerItem{
+        width: auto;
+        padding-right: 10px;
+        height: 100%;
+        position: relative;
+
+        &:hover{
+            .item{
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .item{
+        background-color: $gray;
+        border-radius: 10px;
+        width: auto;
+        padding: 20px 40px;
+        cursor: pointer;
+        
+        height: 100%;
+
+        .logo{
+            width: auto;
+            height: 40px;
+        }
+    }
+
+}

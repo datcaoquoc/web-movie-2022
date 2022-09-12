@@ -1,0 +1,240 @@
+@import '../VariableCss/variable.scss';
+
+
+@keyframes ichover {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.item{
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    animation: ichover 2s;
+
+
+
+
+    .divItem{
+        width: 200px;
+        height: 270px;
+        position: relative;
+        &:hover{
+            .layer{
+                opacity: 1;
+    
+                .icplay{
+                    font-size: 7rem;
+                }
+            }
+        }
+
+        .node{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+
+            .adult{
+                background-image: linear-gradient(to right,rgb(144, 1, 1),rgb(255, 52, 52));
+                padding: 2px 8px;
+                text-align: center;
+                font-size: 1.3rem;
+                color: $white;
+                margin-bottom: 3px;
+                
+                border-radius: 5px;
+            }
+
+        }
+
+        .layer{
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            border-radius: 7px;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.331);
+        
+            .icplay{
+                color: $white;
+                font-size: 0rem;
+                transition: font-size 0.4s;
+            }
+        }
+
+        .imgItem{
+            width: 200px;
+            height: 270px;
+            opacity: 1;
+            border-radius: 7px;
+            transition: opacity 0.3s;
+        }
+
+    }
+
+
+    .originalTitleItem{
+        color: $orange;
+        margin: 0px;
+        font-size: 1.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .titleItem{
+        color: $graylight;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .infor{
+        width: 100%;
+
+        .rateAndLine{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            p{
+                font-size: 1.5rem;
+                color: $white;
+                margin: 0px;
+                
+
+                .icEye{
+                    color: $yellow;
+                    font-size: 1.5rem;
+                    padding-top: 3px;
+                }
+            }
+
+            .rate {
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+}
+
+
+// item horizial
+
+
+.itemHor {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    cursor: pointer;
+    transform: translateX(0%);
+    transition: transform .3s;
+
+    &:hover {
+        transform: translateX(5%);
+    }
+
+    .imgItemHor{
+        width: 80px;
+        height: 110px;
+        border-radius: 8px;
+    }
+
+    .inforItemHor{
+        margin-left: 10px;
+
+        .originalTitleItemItemHor{
+            color: $orange;
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
+
+        .titleItemItemHor{
+            color: $white;
+            margin-bottom: 0;
+
+        }
+
+        .rateAndLineItemHor{
+            color: $white;
+
+            p {
+            margin: 0;
+            }
+        }
+
+        .icEyeItemHor{
+            margin-bottom: 0;
+            color: $yellow;
+            font-size: 15px;
+            
+        }
+
+        .rateItemHor{
+            font-size: 15px;
+        }
+
+        .btnItemHor{
+            display: block;
+            background-color: $yellow;
+            color: $main_dark;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+    }
+}
+
+
+// @media screen and (max-width: 761px) {
+//     .item{
+//         width: 45%;
+//         height: auto;
+//         margin-bottom: 30px;
+//         cursor: pointer;
+//         position: relative;
+//         animation: ichover 2s;
+    
+    
+    
+    
+//         .divItem{
+//             width: 100%;
+//             height: auto;
+//             position: relative;
+//             &:hover{
+//                 .layer{
+//                     opacity: 1;
+        
+//                     .icplay{
+//                         font-size: 7rem;
+//                     }
+//                 }
+//             }
+//             .imgItem{
+//                 width: 100%;
+//                 height: auto;
+//                 opacity: 1;
+//                 border-radius: 7px;
+//                 transition: opacity 0.3s;
+//             }
+
+            
+//         }
+//     }
+
+// }

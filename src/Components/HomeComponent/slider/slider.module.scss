@@ -1,0 +1,335 @@
+@import '../../../common/VariableCss/variable.scss';
+
+.ctn{
+    position: relative;
+
+    .slickbtn{
+        width: auto;
+        height: auto;
+        position: absolute;
+        bottom: 30px;
+        right: 100px;
+        z-index: 1;
+        display: flex;
+
+
+        .iconslick{
+            border: 1px solid $white;
+            height: auto;
+            width:  auto;
+            border-radius: 50%;
+            margin: 0px 5px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px;
+            align-content: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fff;
+                .icon{
+                    color: $main_dark;
+                }
+            }
+
+            .icon{
+                font-size: 3rem;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    // padding: 10px 0px;
+
+    .slideItem {
+        
+        width: 100%;
+        height: 790px;
+
+
+        .backgroundSlide{
+            background-repeat: no-repeat;
+            background-size: cover;
+            // background-position: inherit;
+            width: auto;
+            height: 700px;
+            opacity: 0.5;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            // filter: blur(2px);
+            display: flex;
+
+
+        }
+    } 
+}
+
+.contentSlide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 0px 40px;
+
+    .titleImage {
+        width: 60%;
+        height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .imageSlide {
+        width: 30%;
+        height: 600px;
+        // transform: skew(-10deg, 20deg);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .imageSlide > img {
+        width: 300px;
+        height: auto;
+        transform: skewX(3deg);
+        transform: skewY(-4deg);
+        // transform: rotateY(91deg);
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0px 0px 150px $main_dark;
+        animation: imageslideanimate 1s ease-in-out;
+        animation-direction: alternate;
+        display: block;
+    }
+
+    .titleMovie{
+        color: $orange;
+        font-size: 5rem;
+        width: 100%;
+        cursor: pointer;
+        text-shadow: 0 0 20px rgb(0, 0, 0),0 0 30px rgb(0, 0, 0);
+        animation: titleslideanimate 0.8s;
+    }
+
+    .descMovie{
+        color: $white;
+        text-shadow: 0 0 10px rgb(0, 0, 0),0 0 30px rgb(0, 0, 0);
+        animation: titleslideanimate 1s;
+
+    }
+
+    .rate{
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        text-shadow: 0 0 30px rgb(0, 0, 0);
+        animation: titleslideanimate 0.9s;
+
+        .lableRate{
+            color: $white;
+            margin-right: 10px;
+            font-size: 1.7rem;
+        }
+    }
+
+    .divBtn{
+        margin-top: 20px;
+
+        button{
+            color: $white;
+            width: 160px;
+            height: 40px;
+            margin-right: 20px;
+            align-items: flex-start;
+            cursor: pointer;
+            border: 3px solid #fff;
+            background-color: rgba(255, 228, 196, 0);
+            text-shadow: 0 0 20px rgb(0, 0, 0);
+            animation: titleslideanimate 1.1s;
+        
+        
+            &:hover {
+                box-shadow: 0px 0px 30px #fff,0px 0px 30px #fff;
+            }
+        }
+    }
+    
+    
+
+    
+}
+
+
+
+@keyframes imageslideanimate {
+    0%{
+        // transform: skewX(3deg);
+            
+        // transform: skewY(-90deg);
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: skewX(3deg);
+        transform: skewY(-4deg);
+    }
+}
+
+@keyframes titleslideanimate {
+    0%{
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+
+    }
+}
+
+
+// responesive
+
+
+@media screen and (max-width: 1025px) {
+    
+    .container {
+        height: 500px;
+
+    
+        .slideItem {
+            height: 500px;
+    
+    
+            .backgroundSlide{
+                height: 600px;
+    
+            }
+        } 
+    }
+    .titleMovie{
+        color: $orange;
+        font-size: 4rem;
+        width: 100%;
+        cursor: pointer;
+        text-shadow: 0 0 20px rgb(0, 0, 0),0 0 30px rgb(0, 0, 0);
+        animation: titleslideanimate 0.8s;
+    }
+
+    .contentSlide{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        padding: 0px 20px;
+    
+        .titleImage {
+            width: 60%;
+            height: auto;
+ 
+        }
+        .imageSlide {
+            width: 38%;
+            height: auto;
+
+    
+        }
+    
+        .imageSlide > img {
+            width: 240px;
+        }
+        
+        
+    
+        
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .ctn{
+        position: relative;
+    
+        .slickbtn{
+            width: auto;
+            height: auto;
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+            z-index: 1;
+            display: flex;
+        }
+    }
+
+    .container {
+        height: 400px;
+
+    
+        .slideItem {
+            height: 400px;
+    
+    
+            .backgroundSlide{
+                height: 400px;
+    
+            }
+        } 
+    }
+
+    .contentSlide{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        padding: 0px 20px;
+    
+        .titleImage {
+            width: 100%;
+            height: auto;
+ 
+        }
+        .imageSlide {
+            width: 38%;
+            height: auto;
+            display: none;
+    
+        }
+    
+        
+        .divBtn{
+            display: none;
+        }
+
+        .titleMovie{
+            color: $orange;
+            font-size: 3rem;
+            width: 100%;
+            cursor: pointer;
+            text-shadow: 0 0 20px rgb(0, 0, 0),0 0 30px rgb(0, 0, 0);
+            animation: titleslideanimate 0.8s;
+        }
+}
+}
+
+
